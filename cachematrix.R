@@ -1,6 +1,11 @@
 ## Based on example provided in the peer review website
-#Returns list of functions to create matrix, retrieve matrix, set inverse of matrix and get inverse of matrix
+##makeCacheMatrix allows to create a special matrix and four functions with it (set, get,setinverse, getinverse)
+##cacheSolve allos to retrieve inverse from Cache if it exists, if not then it computes the inverse and commits
+## cache, so that the next time this function is used, it will pull inverse from cache
+
 makeCacheMatrix <- function(x = matrix()) {
+
+#Returns list of functions to create matrix, retrieve matrix, set inverse of matrix and get inverse of matrix
   
   m <- NULL 
   set <- function(y) {
@@ -16,7 +21,6 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
-## Write a short comment describing this function
 ## If inverse exists in cache then below function pulls inverse from Cache, else calculate inverse using matrix provided
 
 cacheSolve <- function(x, ...) {
